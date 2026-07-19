@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build outputs .NET
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# NuGet
+*.nupkg
+packages/
+
+# Ficheiros de base de dados locais (LocalDB, etc.)
+*.mdf
+*.ldf
+*.ndf
+
+# Logs e temporários
+*.log
+*.bak
