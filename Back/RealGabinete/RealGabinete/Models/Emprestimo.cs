@@ -13,7 +13,7 @@ namespace RealGabinete.Models
 
         //Chave estrangeira
         public int ExemplarId { get; set; }
-        public Exemplares Exemplar { get; set; } = null!;
+        public Exemplar Exemplar { get; set; } = null!;
 
         public int LeitorId { get; set; }
         public Leitor Leitor { get; set; } = null!;

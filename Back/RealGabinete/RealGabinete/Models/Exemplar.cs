@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RealGabinete.Models
 {
-    public class Exemplares
+    public class Exemplar
     {
         public int Id { get; set; }
         public string CodigoExemplar { get; set; } = string.Empty;

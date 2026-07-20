@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RealGabinete.Models
 {
-    public class Multas
+    public class Multa
     {
         public int Id { get; set; }
         public decimal Valor { get; set; }
