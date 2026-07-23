@@ -43,4 +43,9 @@ Ver o diagrama em `Data/Diagrama_Gabinete.jpg` para a visão completa das relaç
 4. **`CHECK` constraints** validam estados, status de reservas e datas diretamente na base de dados.
 5. **`Historico_Emprestimos` é uma VIEW**, não uma tabela — evita duplicar dados já existentes noutras tabelas.
 
+## Arquitetura do projeto
+
+![Estrutura de pastas](docs/estrutura-v1.svg)
+
+
 

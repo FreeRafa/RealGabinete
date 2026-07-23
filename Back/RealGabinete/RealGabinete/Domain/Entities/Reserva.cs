@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RealGabinete.Domain.Enums;
 
-namespace RealGabinete.Models
+namespace RealGabinete.Domain.Entities
 {
     public class Reserva
     {

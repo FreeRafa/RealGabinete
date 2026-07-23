@@ -1,0 +1,25 @@
+<svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="40" y="40" width="600" height="340" rx="20" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="60" y="68" font-size="14" font-weight="600" fill="#444441">RealGabinete</text>
+
+  <rect x="60" y="90" width="270" height="100" rx="12" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+  <text x="76" y="114" font-size="14" font-weight="600" fill="#173404">Domain</text>
+  <text x="76" y="136" font-size="12" fill="#27500A">Entities</text>
+  <text x="76" y="154" font-size="12" fill="#27500A">Enums</text>
+  <text x="76" y="172" font-size="12" fill="#27500A">Interfaces</text>
+
+  <rect x="350" y="90" width="270" height="100" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="366" y="114" font-size="14" font-weight="600" fill="#042C53">Application</text>
+  <text x="366" y="136" font-size="12" fill="#0C447C">Services</text>
+
+  <rect x="60" y="210" width="270" height="120" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="76" y="234" font-size="14" font-weight="600" fill="#26215C">Infrastructure</text>
+  <text x="76" y="256" font-size="12" fill="#3C3489">Data</text>
+  <text x="76" y="274" font-size="12" fill="#3C3489">Configurations</text>
+  <text x="76" y="292" font-size="12" fill="#3C3489">Migrations</text>
+  <text x="76" y="310" font-size="12" fill="#3C3489">Repositories</text>
+
+  <rect x="350" y="210" width="270" height="120" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+  <text x="366" y="234" font-size="14" font-weight="600" fill="#412402">Presentation</text>
+  <text x="366" y="256" font-size="12" fill="#633806">Console</text>
+</svg>
