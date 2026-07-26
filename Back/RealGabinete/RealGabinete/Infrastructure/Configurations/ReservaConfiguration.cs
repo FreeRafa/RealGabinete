@@ -16,7 +16,7 @@ namespace RealGabinete.Infrastructure.Configurations
             // StatusReserva e com o CK_Reservas_Status do SQL original.
             builder.ToTable(t => t.HasCheckConstraint(
                 "CK_Reserva_Status",
-                "Status IN ('Pendente','Concluida','Cancelada')"));
+                "Status IN ('Pendente', 'Confirmada', 'Cancelada')"));
         }
     }
 }

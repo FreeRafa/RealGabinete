@@ -21,10 +21,5 @@ namespace RealGabinete.Domain.Entities
         
     }
 
-    public enum StatusReserva
-    {
-        Pendente,
-        Confirmada,
-        Cancelada
-    }
+    
 }

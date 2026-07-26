@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RealGabinete.Domain.Interfaces
 {
-    internal interface IAutorRepository
+    public interface IAutorRepository
     {
         Task<List<Autor>> ObterTodosAsync();
         // Devolve todos os Autores da BD. Task<List<>> porque é assíncrono e pode devolver 0, 1 ou vários registos (nunca null — no máximo lista vazia).
