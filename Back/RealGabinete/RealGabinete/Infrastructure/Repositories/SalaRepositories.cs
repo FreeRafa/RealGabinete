@@ -9,11 +9,11 @@ using RealGabinete.Domain.Interfaces;
 
 namespace RealGabinete.Infrastructure.Repositories
 {
-    public class SalaRepositores : ISalaRepository
+    public class SalaRepositories : ISalaRepository
     {
         private readonly RealGabineteContext _context;
 
-        public SalaRepositores(RealGabineteContext context)
+        public SalaRepositories(RealGabineteContext context)
         {
             _context = context;
         }

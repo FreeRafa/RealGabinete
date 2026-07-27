@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using RealGabinete.Domain.Entities;
 using RealGabinete.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using RealGabinete.Domain.Interfaces;
 
 
 namespace RealGabinete.Infrastructure.Repositories
 {
-    internal class AutorRepositories : Domain.Interfaces.IAutorRepository
+    public class AutorRepositorie : IAutorRepository
     {
         // Guarda a referência ao contexto. "readonly" porque só é
         // atribuído uma vez, no construtor, e nunca mais muda.
@@ -17,7 +18,7 @@ namespace RealGabinete.Infrastructure.Repositories
 
         // Injeção de Dependência: quem cria este repositório (mais tarde,
         // o Program.cs via AddScoped) passa o DbContext já configurado.
-        public AutorRepositories(RealGabineteContext context)
+        public AutorRepositorie(RealGabineteContext context)
         {
             _context = context;
         }
