@@ -42,6 +42,16 @@ namespace RealGabinete.Infrastructure.Repositories
             return bibliotecario;
         }
 
-       
+        public async Task<Bibliotecario> DesativarAsync(int id)
+        {
+            var bibliotecario = await _context.Bibliotecarios.FindAsync(id);
+            if (bibliotecario == null)
+                throw new InvalidOperationException("Bibliotecário não encontrado");
+
+            bibliotecario.Ativo = false;
+            _context.Bibliotecarios.Update(bibliotecario);
+            await _context.SaveChangesAsync();
+            return bibliotecario;
+        }
     }
 }

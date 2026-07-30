@@ -13,14 +13,14 @@ namespace RealGabinete.Domain.Entities
         public decimal Valor { get; set; }
 
         //chaves estrangeiras
-        public int AutorId { get; set; }    
+        public int AutorId { get; set; } 
         public Autor Autor { get; set; } = null!;
 
         public int EditoraId { get; set; }
-        public Editora Editora { get; set; }
+        public Editora Editora { get; set; } = null!;
 
         public int CategoriaId { get; set; }
-        public Categoria Categoria { get; set; }
+        public Categoria Categoria { get; set; } = null!;
 
         //Navegacão: um livro tem varios exemplares
         public ICollection<Exemplar> Exemplares { get; set; } = new List<Exemplar>();

@@ -35,21 +35,20 @@ namespace RealGabinete.Infrastructure.Repositories
             return editora;
         }
 
-        public async Task<Editora?> AtualizarAsync(Editora editora)
+        public async Task AtualizarAsync(Editora editora)
         {
             _context.Editoras.Update(editora);
             await _context.SaveChangesAsync();
-            return editora;
         }
 
-        public async Task<bool> RemoverAsync(int id)
+        public async Task RemoverAsync(int id)
         {
             var editora = await _context.Editoras.FindAsync(id);
             if (editora == null)
-                return false;
+                return;
             _context.Editoras.Remove(editora);
             await _context.SaveChangesAsync();
-            return true;
+            
         }
     }
 

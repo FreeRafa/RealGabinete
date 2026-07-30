@@ -35,21 +35,21 @@ namespace RealGabinete.Infrastructure.Repositories
             return leitor;
         }
 
-        public async Task<Leitor?> AtualizarAsync(Leitor leitor)
+        public async Task AtualizarAsync(Leitor leitor)
         {
             _context.Leitores.Update(leitor);
             await _context.SaveChangesAsync();
-            return leitor;
+            
         }
 
-        public async Task<bool> RemoverAsync(int Id)
+        public async Task RemoverAsync(int Id)
         {
             var leitor = await _context.Leitores.FindAsync(Id);
             if (leitor == null)
-                return false;
+                return;
             _context.Leitores.Remove(leitor);
             await _context.SaveChangesAsync();
-            return true;
+            return;
         }
     }
 }

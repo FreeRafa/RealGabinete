@@ -35,22 +35,22 @@ namespace RealGabinete.Infrastructure.Repositories
             return prateleira;
         }
                 
-        public async Task<Prateleira?> AtualizarAsync(Prateleira prateleira)
+        public async Task AtualizarAsync(Prateleira prateleira)
         {
             _context.Prateleiras.Update(prateleira);
             await _context.SaveChangesAsync();
-            return prateleira;
+            
         }
 
-        public async Task<bool> RemoverAsync(int id)
+        public async Task RemoverAsync(int id)
         {
             var prateleira = await _context.Prateleiras.FindAsync(id);
             if (prateleira == null)
-                return false;
+                return;
 
             _context.Prateleiras.Remove(prateleira);
             await _context.SaveChangesAsync();
-            return true;
+            return;
         }
 
 

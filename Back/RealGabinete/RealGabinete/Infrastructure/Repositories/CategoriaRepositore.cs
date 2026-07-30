@@ -18,38 +18,37 @@ namespace RealGabinete.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<List<Categoria>> ObterTodosAsync() 
+        public async Task<List<Categoria>> ObterTodosAsync()
         {
             return await _context.Categorias.ToListAsync();
         }
 
-        public async Task<Categoria?> ObterPorIdAsync(int id) 
+        public async Task<Categoria?> ObterPorIdAsync(int id)
         {
             return await _context.Categorias.FindAsync(id);
         }
 
-        public async Task<Categoria> AdicionarAsync(Categoria categoria) 
+        public async Task<Categoria> AdicionarAsync(Categoria categoria)
         {
             _context.Add(categoria);
             await _context.SaveChangesAsync();
             return categoria;
         }
 
-        public async Task<Categoria> AtualizarAsync(Categoria categoria)
+        public async Task AtualizarAsync(Categoria categoria)
         {
             _context.Entry(categoria).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-            return categoria;
         }
 
-        public async Task<bool> RemoverAsync(int id)
+        public async Task RemoverAsync(int id)
         {
             var categoria = await _context.Categorias.FindAsync(id);
-            if (categoria == null) return false;
+            if (categoria == null) return;
 
             _context.Remove(categoria);
             await _context.SaveChangesAsync();
-            return true;
+            
         }
     }
 }

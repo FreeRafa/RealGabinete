@@ -14,14 +14,14 @@ namespace RealGabinete.Domain
         IAutorRepository Autores { get; }
         ISalaRepository Salas { get; }
         IEmprestimoRepository Emprestimos { get; }
-        IReservaRepository Reserva { get; } 
-        IEditoraRepository Editora { get; }
+        IReservaRepository Reservas { get; } 
+        IEditoraRepository Editoras { get; }
         ICategoriaRepository Categorias { get; }
-        IPrateleiraRepository Prateles { get; }
+        IPrateleiraRepository Prateleiras { get; }
         ILivrosRepository Livros { get; }
         IExemplaresRepository Exemplares { get; }
         ILeitoresRepository Leitores { get; }
-        IBibliotecarioRepository Bibliotecario { get; }
+        IBibliotecarioRepository Bibliotecarios { get; }
         IMultasRepository Multas { get; }
 
         // ... (as restantes 8, mesmo padrão)

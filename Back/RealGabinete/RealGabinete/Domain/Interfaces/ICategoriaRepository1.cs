@@ -10,8 +10,8 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Categoria>> ObterTodosAsync();
         Task<Categoria?> ObterPorIdAsync(int id);
-        Task<Categoria?> AdicionarAsync(Categoria categoria);
-        Task<Categoria?> AtualizarAsync(Categoria categoria);
-        Task<bool> RemoverAsync(int id);
+        Task<Categoria> AdicionarAsync(Categoria categoria);
+        Task AtualizarAsync(Categoria categoria);
+        Task RemoverAsync(int id);
     }
 }
