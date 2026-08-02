@@ -10,7 +10,7 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Exemplar>> ObterTodosAsync();
         Task<Exemplar?> ObterPorIdAsync(int id);
-        Task<Exemplar?> AdicionarAsync(Exemplar exemplar);
+        Task<Exemplar> AdicionarAsync(Exemplar exemplar);
         Task AtualizarAsync(Exemplar exemplar);
         Task RemoverAsync(int id);
     }

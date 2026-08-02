@@ -10,7 +10,7 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Editora>> ObterTodosAsync();
         Task<Editora?> ObterPorIdAsync(int id);
-        Task<Editora?> AdicionarAsync(Editora editora);
+        Task<Editora> AdicionarAsync(Editora editora);
         Task AtualizarAsync(Editora editora);
         Task RemoverAsync(int id);
     }

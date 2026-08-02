@@ -28,7 +28,7 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Prateleiras.FindAsync(id);
         }
 
-        public async Task<Prateleira?> AdicionarAsync(Prateleira prateleira)
+        public async Task<Prateleira> AdicionarAsync(Prateleira prateleira)
         {
             _context.Prateleiras.Add(prateleira);
             await _context.SaveChangesAsync();

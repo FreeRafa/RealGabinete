@@ -26,13 +26,13 @@ namespace RealGabinete.Infrastructure.Repositories
         {
             return await _context.Multas.FindAsync(id);
         }
-        public async Task<Multa?> AdicionarAsync(Multa multa)
+        public async Task<Multa> AdicionarAsync(Multa multa)
         {
             _context.Multas.Add(multa);
             await _context.SaveChangesAsync();
             return multa;
         }
-        public async Task<Multa?> AtualizarAsync(Multa multa)
+        public async Task<Multa> AtualizarAsync(Multa multa)
         {
             _context.Multas.Update(multa);
             await _context.SaveChangesAsync();

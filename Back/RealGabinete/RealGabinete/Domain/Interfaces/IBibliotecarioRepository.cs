@@ -10,8 +10,8 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Bibliotecario>> ObterTodosAsync();
         Task<Bibliotecario?> ObterPorIdAsync(int id);
-        Task<Bibliotecario?> AdicionarAsync(Bibliotecario bibliotecario);
-        Task<Bibliotecario?> AtualizarAsync(Bibliotecario bibliotecario);
+        Task<Bibliotecario> AdicionarAsync(Bibliotecario bibliotecario);
+        Task<Bibliotecario> AtualizarAsync(Bibliotecario bibliotecario);
         Task<Bibliotecario> DesativarAsync(int id);
 
         

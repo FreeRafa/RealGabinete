@@ -28,14 +28,14 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Bibliotecarios.FindAsync(id);
         }
 
-        public async Task<Bibliotecario?> AdicionarAsync(Bibliotecario bibliotecario)
+        public async Task<Bibliotecario> AdicionarAsync(Bibliotecario bibliotecario)
         {
             _context.Bibliotecarios.Add(bibliotecario);
             await _context.SaveChangesAsync();
             return bibliotecario;
         }
 
-        public async Task<Bibliotecario?> AtualizarAsync(Bibliotecario bibliotecario)
+        public async Task<Bibliotecario> AtualizarAsync(Bibliotecario bibliotecario)
         {
             _context.Bibliotecarios.Update(bibliotecario);
             await _context.SaveChangesAsync();

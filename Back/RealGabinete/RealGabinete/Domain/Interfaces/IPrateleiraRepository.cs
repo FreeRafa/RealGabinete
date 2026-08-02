@@ -10,7 +10,7 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Prateleira>> ObterTodosAsync();
         Task<Prateleira?> ObterPorIdAsync(int id);
-        Task<Prateleira?> AdicionarAsync(Prateleira prateleira);
+        Task<Prateleira> AdicionarAsync(Prateleira prateleira);
         Task AtualizarAsync(Prateleira prateleira);
         Task RemoverAsync(int id);
     }

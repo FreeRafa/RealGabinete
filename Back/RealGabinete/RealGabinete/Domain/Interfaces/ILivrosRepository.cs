@@ -10,7 +10,7 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Livro>> ObterTodosAsync();
         Task<Livro?> ObterPorIdAsync(int id);
-        Task<Livro?> AdicionarAsync(Livro livro);
+        Task<Livro> AdicionarAsync(Livro livro);
         Task AtualizarAsync(Livro livro);
         Task RemoverAsync(int id);
     }

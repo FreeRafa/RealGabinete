@@ -28,7 +28,7 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Editoras.FindAsync(id);
         }
 
-        public async Task<Editora?> AdicionarAsync(Editora editora)
+        public async Task<Editora> AdicionarAsync(Editora editora)
         {
             _context.Editoras.Add(editora);
             await _context.SaveChangesAsync();

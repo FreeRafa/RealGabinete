@@ -1,8 +1,11 @@
 ﻿using RealGabinete.Domain.Interfaces;
+using RealGabinete.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using RealGabinete.Domain.Entities;
+
 
 namespace RealGabinete.Domain
 {
@@ -24,8 +27,7 @@ namespace RealGabinete.Domain
         IBibliotecarioRepository Bibliotecarios { get; }
         IMultasRepository Multas { get; }
 
-        // ... (as restantes 8, mesmo padrão)
-
+     
         // O único método que efetivamente grava tudo na BD.
         // Devolve Task<int> porque o SaveChangesAsync do EF Core
         // devolve o número de linhas afetadas — útil, por exemplo,

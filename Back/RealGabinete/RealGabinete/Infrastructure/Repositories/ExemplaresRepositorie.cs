@@ -29,7 +29,7 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Exemplares.FindAsync(id);
         }
 
-        public async Task<Exemplar?> AdicionarAsync(Exemplar exemplar)
+        public async Task<Exemplar> AdicionarAsync(Exemplar exemplar)
         {
             _context.Exemplares.Add(exemplar);
             await _context.SaveChangesAsync();

@@ -27,14 +27,14 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Emprestimos.FindAsync(id);
         }
 
-        public async Task<Emprestimo?> AdicionarAsync(Emprestimo emprestimo)
+        public async Task<Emprestimo> AdicionarAsync(Emprestimo emprestimo)
         {
             _context.Emprestimos.Add(emprestimo);
             await _context.SaveChangesAsync();
             return emprestimo;
         }
 
-        public async Task<Emprestimo?> AtualizarAsync(Emprestimo emprestimo)
+        public async Task<Emprestimo> AtualizarAsync(Emprestimo emprestimo)
         {
             _context.Emprestimos.Update(emprestimo);
             await _context.SaveChangesAsync();

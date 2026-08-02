@@ -28,7 +28,7 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Leitores.FindAsync(id);
         }
 
-        public async Task<Leitor?> AdicionarAsync(Leitor leitor)
+        public async Task<Leitor> AdicionarAsync(Leitor leitor)
         {
             _context.Leitores.Add(leitor);
             await _context.SaveChangesAsync();

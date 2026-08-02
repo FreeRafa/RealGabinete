@@ -10,8 +10,8 @@ namespace RealGabinete.Domain.Interfaces
     {
         Task<List<Reserva>> ObterTodosAsync();
         Task<Reserva?> ObterPorIdAsync(int id);
-        Task<Reserva?> AdicionarAsync(Reserva reserva);
-        Task<Reserva?> AtualizarAsync(Reserva reserva);
+        Task<Reserva> AdicionarAsync(Reserva reserva);
+        Task<Reserva> AtualizarAsync(Reserva reserva);
         
     }
 }

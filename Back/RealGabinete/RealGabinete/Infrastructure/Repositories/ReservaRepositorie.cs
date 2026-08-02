@@ -28,14 +28,14 @@ namespace RealGabinete.Infrastructure.Repositories
             return await _context.Reservas.FindAsync(id);
         }
 
-        public async Task<Reserva?> AdicionarAsync(Reserva reserva)
+        public async Task<Reserva> AdicionarAsync(Reserva reserva)
         {
             _context.Reservas.Add(reserva);
             await _context.SaveChangesAsync();
             return reserva;
         }
 
-        public async Task<Reserva?> AtualizarAsync(Reserva reserva)
+        public async Task<Reserva> AtualizarAsync(Reserva reserva)
         {
             _context.Reservas.Update(reserva);
             await _context.SaveChangesAsync();

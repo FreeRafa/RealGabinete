@@ -24,7 +24,7 @@ namespace RealGabinete.Infrastructure.Repositories
         {
             return await _context.Livros.FindAsync(id);
         }
-        public async Task<Livro?> AdicionarAsync(Livro livro)
+        public async Task<Livro> AdicionarAsync(Livro livro)
         {
             _context.Livros.Add(livro);
             await _context.SaveChangesAsync();
