@@ -43,7 +43,7 @@ namespace RealGabinete.Infrastructure.Repositories
         public async Task RemoveAsync(int id) 
         {
             var author = await _context.Authors.FindAsync(id);
-            if (author == null) 
+            if (author != null) 
             {
                 _context.Authors.Remove(author);
                 await _context.SaveChangesAsync();

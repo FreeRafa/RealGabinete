@@ -43,7 +43,7 @@ namespace RealGabinete.Infrastructure.Repositories
         public async Task RemoveAsync(int id) 
         {
             var category = await _context.Categories.FindAsync(id);
-            if (category == null) 
+            if (category != null) 
             {
                 _context.Categories.Remove(category);
                 await _context.SaveChangesAsync();

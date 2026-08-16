@@ -9,7 +9,7 @@ namespace RealGabinete.Domain.Entities
         public int Id { get; set; }
         public DateTime LoanDate { get; set; } = DateTime.Now;
         public DateTime DueDate { get; set; } = DateTime.Now.AddDays(14);
-        public DateTime ReturnDate { get; set; } 
+        public DateTime? ReturnDate { get; set; } 
 
         public Copy Copy { get; set; } = null!;
         public int CopyId { get; set; }
