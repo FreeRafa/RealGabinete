@@ -38,7 +38,7 @@ namespace RealGabinete.Application.Services
             await _uow.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task RemoveAsync(int id)
         {
             await _uow.Shelves.RemoveAsync(id);
             await _uow.SaveChangesAsync();

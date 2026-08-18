@@ -32,7 +32,7 @@ namespace RealGabinete.Application.Services
             return room;
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task RemoveAsync(int id)
         {
             await _uow.Rooms.RemoveAsync(id);
             await _uow.SaveChangesAsync();

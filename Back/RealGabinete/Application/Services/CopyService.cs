@@ -7,42 +7,42 @@ using System.Threading.Tasks;
 
 namespace RealGabinete.Application.Services
 {
-    public class BookService
+    public class CopyService
     {
         private readonly IUnitOfWork _uow;
 
-        public BookService (IUnitOfWork uow)
+        public CopyService(IUnitOfWork uow)
         {
             _uow = uow;
         }
 
-        public async Task<List<Book>> GetAllAsync()
+        public async Task<List<Copy>> GetAllAsync()
         {
-            return await _uow.Books.GetAllAsync();
+            return await _uow.Copies.GetAllAsync();
         }
 
-        public async Task<Book?> GetByIdAsync(int id)
+        public async Task<Copy?> GetByIdAsync(int id)
         {
-            return await _uow.Books.GetByIdAsync(id);
+            return await _uow.Copies.GetByIdAsync(id);
         }
 
-        public async Task<Book> AddAsync(Book book)
+        public async Task<Copy> AddAsync(Copy copy)
         {
-            await _uow.Books.AddAsync(book);
+            await _uow.Copies.AddAsync(copy);
             await _uow.SaveChangesAsync();
-            return book;
+            return copy;
         }
 
         public async Task RemoveAsync(int id) 
         {
-            await _uow.Books.RemoveAsync(id);
+            await _uow.Copies.RemoveAsync(id);
             await _uow.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Book book)
+        public async Task UpdateAsync(Copy copy)
         {
-            await _uow.Books.UpdateAsync(book);
+            await _uow.Copies.UpdateAsync(copy);
             await _uow.SaveChangesAsync();
-        }
+        } 
     }
 }
