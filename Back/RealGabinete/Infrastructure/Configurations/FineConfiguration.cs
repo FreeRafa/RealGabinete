@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RealGabinete.Domain.Entities;
+
+namespace RealGabinete.Infrastructure.Configurations
+{
+    public class FineConfiguration : IEntityTypeConfiguration<Fine>
+    {
+        public void Configure(EntityTypeBuilder<Fine> builder)
+        {
+            builder
+                .HasIndex(f => f.Amount)
+                .IsUnique()
+                .HasFilter("[ReturnDate] IS NULL");
+        }
+    }
+}
