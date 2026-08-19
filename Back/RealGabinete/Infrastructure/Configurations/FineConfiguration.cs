@@ -9,9 +9,9 @@ namespace RealGabinete.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Fine> builder)
         {
             builder
-                .HasIndex(f => f.Amount)
-                .IsUnique()
-                .HasFilter("[ReturnDate] IS NULL");
+                 .Property(f => f.Amount)
+                .HasPrecision(10, 2);
+
         }
     }
 }

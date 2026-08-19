@@ -11,8 +11,11 @@ namespace RealGabinete.Infrastructure.Configurations
         {
             builder
                 .HasIndex(b => b.ISBN)            // índice baseado na coluna Isbn
-                .IsUnique()                        // torna esse índice único...
-                .HasFilter("[ReturnDate] IS NULL"); // ...mas só entre as linhas onde ReturnDate é nulo
+                .IsUnique();                      // torna esse índice único...
+
+            builder
+                .Property(b => b.Price)
+                .HasPrecision(10, 2);             // define a precisão da coluna Price como 10 dígitos no total, sendo 2 para a parte decimal
         }
     }
 

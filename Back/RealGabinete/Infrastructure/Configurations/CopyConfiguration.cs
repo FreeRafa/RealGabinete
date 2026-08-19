@@ -10,8 +10,8 @@ namespace RealGabinete.Infrastructure.Configurations
         {
             builder
                 .HasIndex(c => c.Code)            // índice baseado na coluna Code
-                .IsUnique()                        // torna esse índice único...
-                .HasFilter("[ReturnDate] IS NULL"); // ...mas só entre as linhas onde ReturnDate é nulo
+                .IsUnique();                      // torna esse índice único...
+                
         }
     }
 }

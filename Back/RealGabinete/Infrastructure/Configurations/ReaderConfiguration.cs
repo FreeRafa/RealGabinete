@@ -9,9 +9,9 @@ namespace RealGabinete.Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Reader> builder)
         {
             builder
-                .HasIndex(r => r.Email)            
-                .IsUnique()                        
-                .HasFilter("[ReturnDate] IS NULL"); 
+                .HasIndex(r => r.Email)
+                .IsUnique();                        
+                
         }
     }
 }

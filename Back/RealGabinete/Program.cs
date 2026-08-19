@@ -1,9 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RealGabinete.Application.Services;
 using RealGabinete.Domain.Interfaces;
 using RealGabinete.Infrastructure.Data;
 using RealGabinete.Infrastructure.Repositories;
+using RealGabinete.Presentation;
+using RealGabinete.Presentation.Menus;
 
 // 1. Ler a configuração (appsettings.json)
 IConfiguration config = new ConfigurationBuilder()
@@ -20,20 +23,14 @@ services.AddDbContext<RealGabineteContext>(options =>
     options.UseSqlServer(connectionString));
 
 services.AddScoped<IUnitOfWork, UnitOfWork>();
+services.AddScoped<AuthorService>();
+services.AddScoped<AuthorMenu>();
+services.AddScoped<MenuPrincipal>();
 
 // 3. Construir o ServiceProvider e abrir um scope
 using var serviceProvider = services.BuildServiceProvider();
 using var scope = serviceProvider.CreateScope();
 
-// 4. Pedir o IUnitOfWork e testar a cadeia completa
-var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
-
-try
-{
-    var authors = await unitOfWork.Authors.GetAllAsync();
-    Console.WriteLine($"Autores encontrados: {authors.Count}");
-}
-catch (Exception ex)
-{
-    Console.WriteLine("Erro ao aceder à base de dados: " + ex.Message);
-}
+// 4. Pedir o MenuPrincipal e iniciar o app
+var menuPrincipal = scope.ServiceProvider.GetRequiredService<MenuPrincipal>();
+await menuPrincipal.ExibirAsync();
