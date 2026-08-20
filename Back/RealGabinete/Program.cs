@@ -23,8 +23,28 @@ services.AddDbContext<RealGabineteContext>(options =>
     options.UseSqlServer(connectionString));
 
 services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 services.AddScoped<AuthorService>();
 services.AddScoped<AuthorMenu>();
+
+services.AddScoped<CategoryService>();
+services.AddScoped<CategoryMenu>();
+
+services.AddScoped<PublisherMenu>();
+services.AddScoped<PublisherService>();
+
+services.AddScoped<RoomService>();
+services.AddScoped<RoomMenu>();
+
+services.AddScoped<ShelfService>();
+services.AddScoped<ShelfMenu>();
+
+services.AddScoped<BookService>();
+services.AddScoped<BookMenu>();
+
+services.AddScoped<CopyService>();
+services.AddScoped<CopyMenu>();
+
 services.AddScoped<MenuPrincipal>();
 
 // 3. Construir o ServiceProvider e abrir um scope
